@@ -3,7 +3,7 @@ import EventForm from './components/EventForm/EventForm';
 
 const App = () => {
   return (
-    <div>
+    <div className='container-home'>
       <EventForm />
     </div>
   );

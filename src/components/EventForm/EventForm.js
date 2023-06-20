@@ -31,12 +31,13 @@ const EventForm = () => {
   return (
     <div className="event-form-container">
       <div className="event-form-left">
+        <h2 className="event-text">Welcome to Scheduler.</h2>
         <img
-          src={event}
+          src="https://img.freepik.com/free-vector/messy-night-workplace-top-view-clutter-office-desk-work-space-with-mess-spilled-coffee-crumbled-muffin-document-around-glowing-pc-monitor_107791-5711.jpg?w=1060&t=st=1687258176~exp=1687258776~hmac=74911dda6a4c2944717d0b713ffedc92ce220b8dacf527f8c7aca6c9688ff4cf"
           alt="Event"
           className="event-image"
         />
-        <h2 className="event-text">Welcome to Scheduler.</h2>
+        
       </div>
       <div className="event-form-right">
         <h2>Add Event</h2>
