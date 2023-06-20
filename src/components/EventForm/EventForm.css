@@ -1,20 +1,53 @@
-body{
-	font-family: 'Poppins', sans-serif;
-	font-weight: 300;
-	font-size: 15px;
-	line-height: 1.7;
-	color: #c4c3ca;
-	background-color: #1f2029;
-	overflow-x: hidden;
-}
-.event-form-container {
-    max-width: 400px;
+body {
+    font-family: 'Poppins', sans-serif;
+    font-weight: 300;
+    font-size: 15px;
+    line-height: 1.7;
+    color: #c4c3ca;
+    background-color: #1f2029;
+    overflow-x: hidden;
+  }
+  
+  .event-form-container {
+    max-width: 1000px;
     margin: 0 auto;
-    font-family: Arial, sans-serif;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: flex-start;
+    justify-content: space-between;
+    padding: 20px;
+  }
+  
+  .event-form-left {
+    flex-basis: 40%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+  
+  .event-image {
+    width: 100%;
+    max-width: 500px; /* Adjust the maximum width as needed */
+  max-height: 1200px; /* Adjust the maximum height as needed */
+  }
+  
+  .event-text {
+    margin-top: 20px;
+    font-size: 24px;
+    font-weight: 700;
+    color: #fff;
+  }
+  
+  .event-form-right {
+    flex-basis: 60%;
+  }
+  
+  .event-form-right h2 {
+    margin-top: 0;
   }
   
   .form-field {
-    margin-bottom: 10px;
+    margin-bottom: 20px;
   }
   
   .checkbox-group {
@@ -25,9 +58,7 @@ body{
   .checkbox-item {
     display: flex;
     align-items: center;
-    margin-right: 20px;
-    flex-basis: 50%;
-    max-width: 50%;
+    margin-bottom: 10px;
   }
   
   .checkbox-item label {
@@ -38,7 +69,7 @@ body{
     display: block;
     width: 100%;
     padding: 10px;
-    margin-top: 10px;
+    margin-top: 20px;
     background-color: #007bff;
     color: #fff;
     border: none;
@@ -48,22 +79,38 @@ body{
   .event-list {
     display: flex;
     flex-wrap: wrap;
+    justify-content: flex-start;
+    align-items: flex-start;
+    margin-top: 20px;
   }
   
   .event-card {
-    flex-basis: 300px;
-    padding: 10px;
+    flex-basis: calc(33.33% - 20px);
     margin: 10px;
+    padding: 10px;
     border: 1px solid #ccc;
     border-radius: 5px;
+    background-color: #2d2e37;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2), 0 4px 8px rgba(0, 0, 0, 0.2);
+    transform-style: preserve-3d;
+    transition: transform 0.3s ease;
+    box-sizing: border-box;
   }
+  
+  .event-card:hover {
+    transform: perspective(800px) rotateY(10deg);
+  }
+  
+
   
   .event-card h3 {
     margin-top: 0;
+    color: #fff;
   }
   
   .event-item p {
     margin: 0;
+    color: #fff;
   }
   
   .event-item hr {
@@ -73,14 +120,37 @@ body{
     border-top: 1px solid #ccc;
   }
   
-  @media screen and (max-width: 600px) {
-    .form-field {
-      margin-bottom: 15px;
-    }
-  
-    .checkbox-item {
-      flex-basis: 100%;
-      max-width: 100%;
+  @media screen and (max-width: 768px) {
+    .event-card {
+      flex-basis: calc(50% - 20px);
     }
   }
   
+  @media screen and (max-width: 480px) {
+    .event-card {
+      flex-basis: calc(100% - 20px);
+    }
+  }
+  .form-field input[type="text"],
+.form-field input[type="date"],
+.form-field input[type="color"],
+.form-field select {
+  width: 100%;
+  padding: 10px;
+  font-size: 16px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+.checkbox-group label {
+  display: inline-flex;
+  align-items: center;
+  margin-right: 15px;
+  font-size: 16px;
+}
+
+.checkbox-group input[type="checkbox"] {
+  margin-right: 5px;
+  width: 16px;
+  height: 16px;
+}
