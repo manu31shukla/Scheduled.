@@ -1,4 +1,21 @@
-#container-home {
-    margin-left: 20px;
-    margin-right: 20px;
-}
+  body {
+    font-family: 'Poppins', sans-serif;
+    font-weight: 300;
+    font-size: 15px;
+    line-height: 1.7;
+    color: #c4c3ca;
+    background-color: #1f2029;
+  }
+  .app-container {
+    padding: 0;
+    margin: 0;
+  }
+  
+  .app-container.light-mode {
+    background-color: #fff;
+  }
+  
+  .content-container.light-mode {
+    color: #000;
+  }
+  

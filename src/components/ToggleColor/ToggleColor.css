@@ -1,0 +1,63 @@
+.toggle-container {
+    display: flex;
+    justify-content: flex-end; /* Adjust this property to move the toggle button to the center or right side */
+    margin-top: 25px;
+    margin-right: 20px;
+  }
+  
+  @media (max-width: 768px) {
+    .toggle-container {
+      justify-content: center; /* Center the toggle button on mobile devices */
+      margin-right: 0; /* Remove the right margin on mobile devices */
+    }
+  }
+  
+  .toggle-switch {
+    position: relative;
+    display: inline-block;
+    width: 60px;
+    height: 25px;
+  }
+  
+  .slider {
+    position: absolute;
+    cursor: pointer;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: #ccc;
+    transition: 0.4s;
+    border-radius: 34px;
+    border: none; /* Remove the border */
+    box-shadow: none; /* Remove any box shadow */
+  }
+  
+  .slider:before {
+    position: absolute;
+    content: '';
+    height: 23px;
+    width: 23px;
+    left: 3px;
+    bottom: 2px;
+    background-color: white;
+    transition: 0.4s;
+    border-radius: 50%;
+  }
+  
+  input:checked + .slider {
+    background-color: #2196f3;
+  }
+  
+  input:checked + .slider:before {
+    transform: translateX(26px);
+  }
+  
+  .slider.round {
+    border-radius: 34px;
+  }
+  
+  .slider.round:before {
+    border-radius: 50%;
+  }
+  

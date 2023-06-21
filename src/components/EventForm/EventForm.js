@@ -1,6 +1,5 @@
 import React, { useState } from 'react';
 import './EventForm.css';
-import event from '../../assets/event.jpg';
 
 const EventForm = () => {
   const [eventName, setEventName] = useState('');
@@ -28,8 +27,10 @@ const EventForm = () => {
     setRecurringDays([]);
   };
 
+ 
+
   return (
-    <div className="event-form-container">
+<div className={`event-form-container`}>
       <div className="event-form-left">
         <h2 className="event-text">Welcome to Scheduler.</h2>
         <img
@@ -40,6 +41,8 @@ const EventForm = () => {
         
       </div>
       <div className="event-form-right">
+      
+
         <h2>Add Event</h2>
         <form onSubmit={handleAddEvent}>
           <div className="form-field">
