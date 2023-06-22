@@ -13,9 +13,7 @@ const App = () => {
   return (
     <div className={`app-container ${isLightMode ? 'light-mode' : ''}`}>
       <ToggleColor isLightMode={isLightMode} onToggle={toggleLightMode} />
-      <div className={`content-container ${isLightMode ? 'light-mode' : ''}`}>
-        <EventForm />
-      </div>
+      <EventForm />
     </div>
   );
 };

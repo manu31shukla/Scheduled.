@@ -11,8 +11,9 @@
     margin: 0;
   }
   
-  .app-container.light-mode {
+  .app-container.light-mode{
     background-color: #fff;
+    margin: 0;
   }
   
   .content-container.light-mode {
