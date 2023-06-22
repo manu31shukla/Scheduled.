@@ -11,11 +11,11 @@ The Event Management App is a web application that allows users to manage and or
 - User-friendly interface for easy event management.
 
 ## Screenshots
-![](src/assets/Screenshots/ss1.png)
-![](src/assets/Screenshots/ss2.png)
-![](src/assets/Screenshots/ss3.png)
-![](src/assets/Screenshots/ss4.png)
-![](src/assets/Screenshots/ss5.png)
+![Dark default mode](src/assets/Screenshots/ss1.png)
+![Light mode](src/assets/Screenshots/ss2.png)
+![Adding Event](src/assets/Screenshots/ss3.png)
+![Event Card View-dark mode](src/assets/Screenshots/ss4.png)
+![Event Card View-light mode](src/assets/Screenshots/ss5.png)
 
 
 ## Technologies Used
