@@ -1,4 +1,4 @@
-# Scheduled.
+# Scheduler.
 
 The Event Management App is a web application that allows users to manage and organize events. Users can create new events, view existing events, and perform various actions related to event management.
 
@@ -9,6 +9,14 @@ The Event Management App is a web application that allows users to manage and or
 - Toggle between light and dark modes to customize the app's appearance.
 - Responsive design to provide a seamless experience on different screen sizes.
 - User-friendly interface for easy event management.
+
+## Screenshots
+![](src/assets/Screenshots/ss1.png)
+![](src/assets/Screenshots/ss2.png)
+![](src/assets/Screenshots/ss3.png)
+![](src/assets/Screenshots/ss4.png)
+![](src/assets/Screenshots/ss5.png)
+
 
 ## Technologies Used
 
