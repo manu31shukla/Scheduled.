@@ -97,6 +97,27 @@
   height: 16px;
 }
 
+
+.add-event-button {
+  display: block;
+  width: 100%;
+  padding: 10px;
+  margin-top: 20px;
+  background-color: #007bff;
+  color: #fff;
+  border: none;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.add-event-button:hover {
+  background-color: #0056b3;
+}
+
+.add-event-button:active {
+  background-color: #00317a;
+}
+
 @media screen and (max-width: 768px) {
   .event-card {
     flex-basis: calc(50% - 20px);
@@ -135,24 +156,5 @@
   }
 }
 
-.add-event-button {
-  display: block;
-  width: 100%;
-  padding: 10px;
-  margin-top: 20px;
-  background-color: #007bff;
-  color: #fff;
-  border: none;
-  cursor: pointer;
-  transition: background-color 0.3s ease;
-}
-
-.add-event-button:hover {
-  background-color: #0056b3;
-}
-
-.add-event-button:active {
-  background-color: #00317a;
-}
 
 

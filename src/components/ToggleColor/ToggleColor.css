@@ -1,14 +1,14 @@
 .toggle-container {
     display: flex;
-    justify-content: flex-end; /* Adjust this property to move the toggle button to the center or right side */
+    justify-content: flex-end;
     margin-top: 25px;
     margin-right: 20px;
   }
   
   @media (max-width: 768px) {
     .toggle-container {
-      justify-content: center; /* Center the toggle button on mobile devices */
-      margin-right: 0; /* Remove the right margin on mobile devices */
+      justify-content: center; /* Center toggle button on mobile devices */
+      margin-right: 0; 
     }
   }
   
@@ -29,8 +29,8 @@
     background-color: #ccc;
     transition: 0.4s;
     border-radius: 34px;
-    border: none; /* Remove the border */
-    box-shadow: none; /* Remove any box shadow */
+    border: none; 
+    box-shadow: none; 
   }
   
   .slider:before {

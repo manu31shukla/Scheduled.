@@ -41,6 +41,7 @@ To get started with the Event Management App, follow these steps:
 
 
 3. Start the development server:
+
     ```bash
     npm start
 

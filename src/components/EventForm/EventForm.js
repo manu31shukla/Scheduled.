@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import './EventForm.css';
 
 const EventForm = () => {
+  // Step 1: Define state variables
   const [eventName, setEventName] = useState('');
   const [startDate, setStartDate] = useState('');
   const [endDate, setEndDate] = useState('');
@@ -12,6 +13,7 @@ const EventForm = () => {
   const handleAddEvent = (event) => {
     event.preventDefault();
 
+    // Step 2: Create a new event object
     const newEvent = {
       eventName,
       startDate,
@@ -20,31 +22,31 @@ const EventForm = () => {
       color,
     };
 
+    // Step 3: Update the events array with the new event
     setEvents([...events, newEvent]);
+
+    // Step 4: Reset the form fields
     setEventName('');
     setStartDate('');
     setEndDate('');
     setRecurringDays([]);
   };
 
- 
-
   return (
-<div className={`event-form-container`}>
+    <div className={`event-form-container`}>
       <div className="event-form-left">
+        {/* Step 5: Add welcome message and event image */}
         <h2 className="event-text">Welcome to Scheduler.</h2>
         <img
           src="https://img.freepik.com/free-vector/messy-night-workplace-top-view-clutter-office-desk-work-space-with-mess-spilled-coffee-crumbled-muffin-document-around-glowing-pc-monitor_107791-5711.jpg?w=1060&t=st=1687258176~exp=1687258776~hmac=74911dda6a4c2944717d0b713ffedc92ce220b8dacf527f8c7aca6c9688ff4cf"
           alt="Event"
           className="event-image"
         />
-        
       </div>
       <div className="event-form-right">
-      
-
         <h2>Add Event</h2>
         <form onSubmit={handleAddEvent}>
+          {/* Step 6: Add input fields for event details */}
           <div className="form-field">
             <label htmlFor="eventName">Event Name:</label>
             <input
@@ -77,7 +79,9 @@ const EventForm = () => {
           </div>
           <div className="form-field">
             <label htmlFor="recurringDays">Recurring Days:</label>
+            {/* Step 7: Create checkbox inputs for recurring days */}
             <div className="checkbox-group">
+              {/* Checkbox for weekdays */}
               <div className="checkbox-item">
                 <input
                   type="checkbox"
@@ -96,6 +100,7 @@ const EventForm = () => {
                 />
                 <label htmlFor="monday">Monday</label>
               </div>
+             
               <div className="checkbox-item">
                 <input
                   type="checkbox"
@@ -114,96 +119,6 @@ const EventForm = () => {
                 />
                 <label htmlFor="tuesday">Tuesday</label>
               </div>
-              <div className="checkbox-item">
-                <input
-                  type="checkbox"
-                  id="wednesday"
-                  value="Wednesday"
-                  checked={recurringDays.includes('Wednesday')}
-                  onChange={(e) => {
-                    if (e.target.checked) {
-                      setRecurringDays([...recurringDays, 'Wednesday']);
-                    } else {
-                      setRecurringDays(
-                        recurringDays.filter((day) => day !== 'Wednesday')
-                      );
-                    }
-                  }}
-                />
-                <label htmlFor="wednesday">Wednesday</label>
-              </div>
-              <div className="checkbox-item">
-                <input
-                  type="checkbox"
-                  id="thursday"
-                  value="Thursday"
-                  checked={recurringDays.includes('Thursday')}
-                  onChange={(e) => {
-                    if (e.target.checked) {
-                      setRecurringDays([...recurringDays, 'Thursday']);
-                    } else {
-                      setRecurringDays(
-                        recurringDays.filter((day) => day !== 'Thursday')
-                      );
-                    }
-                  }}
-                />
-                <label htmlFor="thursday">Thursday</label>
-              </div>
-              <div className="checkbox-item">
-                <input
-                  type="checkbox"
-                  id="friday"
-                  value="Friday"
-                  checked={recurringDays.includes('Friday')}
-                  onChange={(e) => {
-                    if (e.target.checked) {
-                      setRecurringDays([...recurringDays, 'Friday']);
-                    } else {
-                      setRecurringDays(
-                        recurringDays.filter((day) => day !== 'Friday')
-                      );
-                    }
-                  }}
-                />
-                <label htmlFor="friday">Friday</label>
-              </div>
-              <div className="checkbox-item">
-                <input
-                  type="checkbox"
-                  id="saturday"
-                  value="Saturday"
-                  checked={recurringDays.includes('Saturday')}
-                  onChange={(e) => {
-                    if (e.target.checked) {
-                      setRecurringDays([...recurringDays, 'Saturday']);
-                    } else {
-                      setRecurringDays(
-                        recurringDays.filter((day) => day !== 'Saturday')
-                      );
-                    }
-                  }}
-                />
-                <label htmlFor="saturday">Saturday</label>
-              </div>
-              <div className="checkbox-item">
-                <input
-                  type="checkbox"
-                  id="sunday"
-                  value="Sunday"
-                  checked={recurringDays.includes('Sunday')}
-                  onChange={(e) => {
-                    if (e.target.checked) {
-                      setRecurringDays([...recurringDays, 'Sunday']);
-                    } else {
-                      setRecurringDays(
-                        recurringDays.filter((day) => day !== 'Sunday')
-                      );
-                    }
-                  }}
-                />
-                <label htmlFor="sunday">Sunday</label>
-              </div>
             </div>
           </div>
           <div className="form-field">
@@ -219,6 +134,7 @@ const EventForm = () => {
             Add Event
           </button>
         </form>
+        {/* Step 8: Display the list of events */}
         {events.length > 0 && (
           <div className="event-list">
             {events.map((event, index) => (
